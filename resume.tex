@@ -1,0 +1,168 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This is a modified ONE COLUMN version of
+% the following template:
+%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \documentclass[]{deedy-resume-openfont}
+
+    \begin{document}
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Profile
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Zijun}{Zhou}{zhouzijun3@huawei.com | Nanjing, CN | www.huajun.link| https://github.com/zijuz13}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Education
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Education}
+\raggedright
+
+\runsubsection{Sichuan University}\descript{| B.E. Computer Science and Technology}\hfill \location{Chengdu, CN | Sep 2015 - Jun 2019}\\
+GPA: 82.38/100 (Overall GPA of last 2 years 86.73/100)\\
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Skills
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Skills}
+\raggedright
+\begin{tabular}{ l l }
+	\descript{Programming Languages} & {\location{Java, C++, JavaScript, ReactJS, VueJS, MySQL}}                 \\
+	\descript{Development Tools}     & {\location{RabbitMQ, Kafka, Spring Cloud, Spring Boot, Quartz, WebDriver, Jenkins, NGINX, Redis}} \\
+\end{tabular}
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Experience
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Work Experience}
+\runsubsection{Huawei}\descript{| General Software Engineer}\hfill \location{Jan 2020 – Present}
+\begin{tightemize}
+	\item Utilized API Designer to design RESTful API\textquotesingle{}s, constructed relevant Spring Cloud projects, and generated Swagger documentation pages
+	\item Used Multi-threaded programming (double-checked locking, CAS, and thread pool) to design and implement AtlasTaskDispatch microservice which can serve thousands of concurrent requests
+	\item Created pipelines in Jenkins, generated relevant analyses, and stored pipeline info in Redis
+	\item Utilized Load Balancing Algorithms to design AtlasPerformanceService to connect the machine with the lowest load to AtlasTaskDispatch
+	\item To overcome the single point of failure in Redis, performance bottleneck and storage limit, configured Redis clusters and replaced Jedis with Redisson
+	\item Developed several Jenkins plugins to improve efficiency, including CheckBuildToolsPlugin, MooseFSPlugin and ChatForJenkins
+	\item Used Spring AOP to create HttpUtils class to obtain detailed records of each request and response
+\end{tightemize}
+\sectionsep
+\runsubsection{Evergrande Group}\descript{| Full Stack Developer}\hfill \location{Mar 2019 – Jan 2020}
+\begin{tightemize}
+	\item Designed SPU (Standardized Product Unit) and SKU (Stock Keeping Unit) for e-commerce systems to store different kinds of products
+	\item Utilized Vue CLI and WebPack to construct Vue.js projects for management services, Element UI and Vuetify components to create user-friendly pages, employed Promise to simplify interactions with back-end clusters, and solved Cross-Domain problem by CORS
+	\item Used Spring Data, Spring Boot, Spring Cloud (Zuul, Eureka, Ribbon, FeignClients, Hystrix) to design the server-side RESTful APIs for the company’s E-commerce systems including login services (JWT authentication), search, item and management services
+	\item Utilized Spring Data ES to add documents to the Elasticsearch indices in order to collect, analyze, and visualize search results
+	\item Combined NGINX with Thymeleaf to turn pages into static pages to adapt to high concurrency scenarios
+	\item Configured FastDFS to solve the problem of managing 1M+ files and avoid having a single point of failure
+	\item Employed Redis to lower the latency and used Kafka as messaging queue to implement data synchronization between Redis and MySQL
+	\item Used Quartz and CRON expression to schedule jobs which send emails to users, and StringBuilder to format the HTML email dynamically
+\end{tightemize}
+\sectionsep
+\runsubsection{NUDT, The Lab of China’s Supercomputer}\descript{| Research Assistant}\hfill \location{Dec 2018 – Jan 2020}
+\begin{tightemize}
+	\item Worked with the 1-D deep convolutional neural network
+	\item Worked on facial recognition based on the Multi-feature fusion of convolutional neural networks to improve the speed of recognition
+\end{tightemize}
+\sectionsep
+\runsubsection{Huadi Technology Company}\descript{| Java Full Stack Developer}\hfill \location{Jan 2018 – Mar 2019}
+\begin{tightemize}
+	\item Employed Vant UI and We UI based on Vue.js to design WeChat apps and mobile webpages to help users recycle
+	\item Used LayUI and Vuetify components to construct user friendly Vue.js pages for admins to manage items and orders
+	\item Deployed Docker Containers with the help of Kubernetes to provide users with more stable service
+	\item Used SpringBoot, SpringCloud (Eureka, Zuul, Ribbon and Hystrix), and MyBatis on Oracle database to implement server-side RESTful APIs, and refactored SQL statements to improve performance by 30\%
+	\item Utilized Spring Security for access control and other administrative responsibilities, and added RocketMQ as a messaging queue
+	\item Used jBPM workflow to implement the approval process, and employed Apache POI to extract data from oracle to excel files
+	\item Used Spring Data JPA instead of MyBatis for a 10\% performance gain
+\end{tightemize}
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Projects
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Projects}
+\raggedright
+
+\runsubsection{\large{Personal Website}}
+\hfill \location{www.huajun.link}\\
+Employed Vue CLI to construct Vue.js projects including portal pages and management pages, used VueRouter\textquotesingle{}s APIs to load routes dynamically, and rendered every menu item and its sub-menus recursively according to the metadata of each route. Configured Selenium WebDriver Docker Container in CentOS, created PullData microservice, combined WebDriver with Quartz to schedule a timed task which fetches election information from websites once a day, and transformed JSON Strings into byte arrays to store in Redis. Configured Elasticsearch Docker Container, used Spring Data ES APIs to create indices, types, and bound listeners to RabbitMQ exchanges in order to implement data synchronization between ES and MySQL\\
+\sectionsep
+  
+
+\runsubsection{\large{Hospital Information System}}
+    
+Combined Bootstrap with LayUI framework to build appointment, login, and sign up pages for doctors, admins and patients. Utilized WebSockets to build real time applications on the web for patients to virtually consult their doctor. Used Spring Boot and MyBatis on MySQL database to build RESTful APIs to implement CRUD functions. Used SpringMVC interceptors for authorization and to dynamically display information based on the user. Employed the ThymeleafResolver to render data on the front end.\\
+\sectionsep
+  
+
+\runsubsection{\large{Sichuan University Library Management System}}
+    
+Used React.js MVVM framework to construct pages for the users, and used the user’s http session and cookies to implement auto-login. Gained connections by HikariDatasource to improve the access speed, and designed the PageModel class to store pagination information\\
+\sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     Awards
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Publications}
+\runsubsection{\large{•	Modeling of Ball Screw: An Overview. Gengjia Chen, Niaoqing Hu, Zijun Zhou, Guoji Shen. CSVE 2019, Xi’an, China}} \descript{} \\
+
+\sectionsep
+\runsubsection{\large{•	Intelligent Extraction Method of Full Life Health Indicator of Rolling Bearing Based on One-dimensional Deep Convolution Neural Network and Principle Component Analysis. Peng Luo, Niaoqing Hu, Guoji Shen, Zhe Cheng, Zijun Zhou. Journal of Vibration and Shock.bay}} \descript{} \\
+
+\sectionsep
+\runsubsection{\large{•	Intelligent Diagnosis of Planetary Gear Fault Based on Continuous Vibration Separation and Convolutional Neural Networks. Lun Zhang, Niaoqing Hu, Zijun Zhou. IAI 2020}} \descript{} \\
+
+\sectionsep
+\ 
+\end{document}
